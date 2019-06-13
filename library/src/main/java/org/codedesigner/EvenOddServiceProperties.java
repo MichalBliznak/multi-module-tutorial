@@ -1,10 +1,10 @@
 package org.codedesigner;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties(prefix="service")
 public class EvenOddServiceProperties {
+    @Value("${service.message}")
     public String message;
 }

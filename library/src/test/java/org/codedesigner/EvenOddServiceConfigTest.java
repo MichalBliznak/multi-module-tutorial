@@ -41,7 +41,7 @@ public class EvenOddServiceConfigTest {
 
     @Test
     public void isMessageInPropertiesSet() {
-        // assertEquals("Hello World!", evenOddServiceProperties.message);
+        assertEquals("Hello World!", evenOddServiceProperties.message);
     }
 
 }
