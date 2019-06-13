@@ -16,6 +16,9 @@ public class EvenOddServiceConfigTest {
     @Autowired
     protected EvenOddService evenOddService;
 
+    @Autowired
+    protected EvenOddServiceProperties evenOddServiceProperties;
+
     @Test
     public void evenOddServiceIsLoaded() {
         assertNotNull(evenOddService);
@@ -23,12 +26,22 @@ public class EvenOddServiceConfigTest {
 
     @Test
     public void isOddNumber() {
-        assertEquals(evenOddService.isEvenOrOdd(1), "Odd");
+        assertEquals("Odd", evenOddService.isEvenOrOdd(1));
     }
 
     @Test
     public void isEvenNumber() {
-        assertEquals(evenOddService.isEvenOrOdd(2), "Even");
+        assertEquals("Even", evenOddService.isEvenOrOdd(2));
+    }
+
+    @Test
+    public void evenOddServicePropertiesIsLoaded() {
+        assertNotNull(evenOddServiceProperties);
+    }
+
+    @Test
+    public void isMessageInPropertiesSet() {
+        assertEquals("Hello World!", evenOddServiceProperties.message);
     }
 
 }
